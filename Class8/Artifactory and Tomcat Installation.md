@@ -24,12 +24,12 @@ Artifactory
 
 ## Step 1 : Install pre-requisite software packages
 ```
-yum install java-1.8.0-openjdk-devel vim wget git -y
+yum install java-11-openjdk-devel vim wget git -y
 systemctl stop firewalld;systemctl disable firewalld
-wget https://archive.apache.org/dist/maven/maven-3/3.8.5/binaries/apache-maven-3.8.5-bin.tar.gz
-tar xvf apache-maven-3.8.5-bin.tar.gz
+wget https://archive.apache.org/dist/maven/maven-3/3.8.7/binaries/apache-maven-3.8.7-bin.tar.gz
+tar xvf apache-maven-3.8.7-bin.tar.gz
 mkdir -p /usr/local/apache-maven
-cd apache-maven-3.8.5/
+cd apache-maven-3.8.7/
 mv *  /usr/local/apache-maven
 ```
 *******************************************************************************************************************
@@ -40,11 +40,11 @@ vim ~/.bash_profile
 ```
 In this file
 ```
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0
-export JRE_HOME=/usr/lib/jvm/java-1.8.0/jre
+export JAVA_HOME=/usr/local/jdk-11.0.1/
+export JRE_HOME=/usr/lib/jvm/jre-11/
 PATH=$PATH:$HOME/bin:$JAVA_HOME/bin:$JRE_HOME/bin
 export M2_HOME=/usr/local/apache-maven
-export M2=$M2_HOME/bin 
+export M2=$M2_HOME/bin
 export PATH=$M2:$PATH
 ```
 ```
@@ -89,9 +89,9 @@ change heap size to 512mb --> if you want play in testing this also just for ref
 ## Step 6: Install TOMCAT Web Application server
 ```
 mkdir /usr/local/tomcat
-sudo wget https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.33/bin/apache-tomcat-9.0.33.tar.gz
-sudo tar xvf apache-tomcat-9.0.33.tar.gz --strip-components=1 -C /usr/local/tomcat
-sudo ln -s /usr/local/tomcat/apache-tomcat-9.0.33 /usr/local/tomcat/tomcat
+sudo wget https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz
+sudo tar xvf apache-tomcat-9.0.71.tar.gz --strip-components=1 -C /usr/local/tomcat
+sudo ln -s /usr/local/tomcat/apache-tomcat-9.0.71 /usr/local/tomcat/tomcat
 sudo useradd -r tomcat
 sudo chown -R tomcat:tomcat /usr/local/tomcat
 ```
