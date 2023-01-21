@@ -73,7 +73,7 @@ Step 5: Test the sample application build
 
 https://github.com/cloudnloud/docker-jenkins-integration-sample
 
-create jenkins freestyle project
+create jenkins maven project
 
 In add build steps --> select Invoke top-level Maven Targets --> select Maven Version --> Goals (type install)
 
