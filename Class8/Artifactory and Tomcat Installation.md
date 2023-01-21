@@ -24,6 +24,9 @@ Artifactory
 
 ## Step 1 : Install pre-requisite software packages
 ```
+curl -O https://download.java.net/java/GA/jdk11/13/GPL/openjdk-11.0.1_linux-x64_bin.tar.gz
+tar zxvf openjdk-11.0.1_linux-x64_bin.tar.gz
+mv jdk-11.0.1 /usr/local/
 yum install java-11-openjdk-devel vim wget git -y
 systemctl stop firewalld;systemctl disable firewalld
 wget https://archive.apache.org/dist/maven/maven-3/3.8.7/binaries/apache-maven-3.8.7-bin.tar.gz
