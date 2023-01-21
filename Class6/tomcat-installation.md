@@ -16,12 +16,15 @@ Step 8: Global Tools Settings - In Jenkins Console - JAVA , MAVEN, GIT
 *******************************************************************************************************************
 Step 1 : Install pre-requisite software packages
 
-yum install java-1.8.0-openjdk-devel vim wget git -y
+curl -O https://download.java.net/java/GA/jdk11/13/GPL/openjdk-11.0.1_linux-x64_bin.tar.gz
+tar zxvf openjdk-11.0.1_linux-x64_bin.tar.gz
+mv jdk-11.0.1 /usr/local/
+yum install java-11-openjdk-devel vim wget git -y
 systemctl stop firewalld;systemctl disable firewalld
-wget https://archive.apache.org/dist/maven/maven-3/3.8.5/binaries/apache-maven-3.8.5-bin.tar.gz
-tar xvf apache-maven-3.8.5-bin.tar.gz
-cd apache-maven-3.8.5/
+wget https://archive.apache.org/dist/maven/maven-3/3.8.7/binaries/apache-maven-3.8.7-bin.tar.gz
+tar xvf apache-maven-3.8.7-bin.tar.gz
 mkdir -p /usr/local/apache-maven
+cd apache-maven-3.8.7/
 mv *  /usr/local/apache-maven
 
 *******************************************************************************************************************
@@ -31,11 +34,11 @@ vim ~/.bash_profile
 
 In this file
 
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0
-export JRE_HOME=/usr/lib/jvm/java-1.8.0/jre
+export JAVA_HOME=/usr/local/jdk-11.0.1/
+export JRE_HOME=/usr/lib/jvm/jre-11/
 PATH=$PATH:$HOME/bin:$JAVA_HOME/bin:$JRE_HOME/bin
 export M2_HOME=/usr/local/apache-maven
-export M2=$M2_HOME/bin 
+export M2=$M2_HOME/bin
 export PATH=$M2:$PATH
 
 source ~/.bash_profile
