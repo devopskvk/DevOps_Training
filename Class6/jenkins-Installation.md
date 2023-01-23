@@ -41,16 +41,16 @@ systemctl stop firewalld;systemctl disable firewalld
 ```
 
 ```
-wget https://archive.apache.org/dist/maven/maven-3/3.8.5/binaries/apache-maven-3.8.5-bin.tar.gz
+wget https://archive.apache.org/dist/maven/maven-3/3.8.7/binaries/apache-maven-3.8.7-bin.tar.gz
 ```
 
 
 ```
-tar xvf apache-maven-3.8.5-bin.tar.gz
+tar xvf apache-maven-3.8.7-bin.tar.gz
 ```
 
 ```
-mv apache-maven-3.8.5  /usr/local/apache-maven
+mv apache-maven-3.8.7  /usr/local/apache-maven
 ```
 
 
