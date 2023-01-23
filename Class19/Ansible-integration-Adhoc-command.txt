@@ -67,7 +67,7 @@ ssh-copy-id node1
 *******************************************************************************************************************
 Step 3:  Install and Configure ansible in jenkins machine
 
-yum install https://mirror.sjtu.edu.cn/fedora/epel/7/x86_64/Packages/a/ansible-2.9.23-1.el7.noarch.rpm
+yum install https://mirror.sjtu.edu.cn/fedora/epel/7/x86_64/Packages/a/ansible-python3-2.9.27-1.el7.noarch.rpm
 
 in jenkins machine as an root user
 
