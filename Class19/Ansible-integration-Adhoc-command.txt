@@ -10,7 +10,7 @@ To start this handson lab,you need following resources.
 prerequisites
 Step 1: Install and configure jenkins in centos 7 machine
 
-refer --> https://github.com/cloudnloud/Devops_Tools_Training/tree/main/Class6
+refer --> https://github.com/devopskvk/DevOps_Training/blob/main/Class6/jenkins-Installation.md
 
 *******************************************************************************************************************
 Step 1 : Create user in node1 ansible client linux machine
