@@ -23,8 +23,17 @@ Step 5:  Create pipeline and launch EC2-instances
 
 *******************************************************************************************************************
 
-
 Step 4:  Install AWS cli in jenkins server
+
+awscli version installation. 
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+add it on .bash_profile file export PATH=/usr/local/bin:$PATH
+install python or set the environment variable
+ln -s /usr/bin/python3.9 /usr/bin/python
+
+*******************************************************************************************************************
 
 yum install awscli -y
 
